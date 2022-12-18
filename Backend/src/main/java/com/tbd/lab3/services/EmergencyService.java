@@ -1,9 +1,10 @@
-package com.tbd.lab2.services;
+package com.tbd.lab3.services;
 
-import com.tbd.lab2.Models.Emergency;
-import com.tbd.lab2.repositories.EmergencyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.tbd.lab3.models.Emergency;
+import com.tbd.lab3.repositories.EmergencyRepository;
 
 import java.util.List;
 

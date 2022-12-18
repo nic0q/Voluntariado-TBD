@@ -1,7 +1,8 @@
-package com.tbd.lab2.repositories;
+package com.tbd.lab3.repositories;
 
-import com.tbd.lab2.Models.Task;
 import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.tbd.lab3.models.Task;
 
 public interface TaskRepository extends MongoRepository<Task, Integer> {
 }

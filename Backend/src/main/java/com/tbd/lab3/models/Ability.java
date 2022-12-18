@@ -1,4 +1,4 @@
-package com.tbd.lab2.Models;
+package com.tbd.lab3.models;
 
 /**
  * Clase que representa una habilidad

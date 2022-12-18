@@ -1,4 +1,4 @@
-package com.tbd.lab2.services;
+package com.tbd.lab3.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -6,8 +6,8 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.web.bind.annotation.*;
 
-import com.tbd.lab2.Models.Region;
-import com.tbd.lab2.repositories.RegionRepository;
+import com.tbd.lab3.models.Region;
+import com.tbd.lab3.repositories.RegionRepository;
 
 import java.util.List;
 /**

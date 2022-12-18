@@ -1,12 +1,13 @@
-package com.tbd.lab2.services;
+package com.tbd.lab3.services;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.AggregateIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.tbd.lab2.Models.Task;
-import com.tbd.lab2.repositories.TaskRepository;
+import com.tbd.lab3.models.Task;
+import com.tbd.lab3.repositories.TaskRepository;
+
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

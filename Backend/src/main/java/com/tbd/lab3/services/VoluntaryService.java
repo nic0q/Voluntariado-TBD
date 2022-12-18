@@ -1,12 +1,8 @@
-package com.tbd.lab2.services;
+package com.tbd.lab3.services;
 
-import com.tbd.lab2.Models.Region;
-import com.tbd.lab2.Models.Voluntary;
-import com.tbd.lab2.repositories.VoluntaryRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
 import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -14,6 +10,10 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.tbd.lab3.models.Region;
+import com.tbd.lab3.models.Voluntary;
+import com.tbd.lab3.repositories.VoluntaryRepository;
 
 /**
  * Clase servicio para Voluntary.
@@ -33,8 +33,6 @@ public class VoluntaryService {
      */
     @GetMapping("/voluntaries")
     public List<Voluntary> getAllVoluntaries() {
-        GeoJsonPoint point = new GeoJsonPoint(voluntaryRepository.findAll().get(0).getLongitud(), voluntaryRepository.findAll().get(0).getLatitud());
-        System.out.println(point);
         return voluntaryRepository.findAll();
     }
 
