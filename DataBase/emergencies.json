@@ -3,7 +3,6 @@
         "id_emergency": 1,
         "name": "Tsumani",
         "description": "Evacua la poblacion",
-        "id_institution": 0,
         "status": true,
         "latitud": -73.255457,
         "longitud": -39.835746
@@ -12,7 +11,6 @@
         "id_emergency": 2,
         "name": "Incendio",
         "description": "Peligro de animales silvestres en la zona",
-        "id_institution": 2,
         "status": true,
         "latitud": -70.665808,
         "longitud": -33.418902
@@ -21,7 +19,6 @@
         "id_emergency": 3,
         "name": "Inundacion",
         "description": "Urgente",
-        "id_institution": 1,
         "status": true,
         "latitud": -71.358944,
         "longitud": -29.987806
@@ -30,7 +27,6 @@
         "id_emergency": 4,
         "name": "Erupcion volcanica",
         "description": "destruccion total",
-        "id_institution": 3,
         "status": true,
         "latitud": -71.942540,
         "longitud": -39.418783
@@ -39,7 +35,6 @@
         "id_emergency": 5,
         "name": "Incendio",
         "description": "Peligro de animales silvestres en la zona",
-        "id_institution": 2,
         "status": true,
         "latitud": -70.729649,
         "longitud": -33.449612

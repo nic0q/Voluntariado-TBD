@@ -1,13 +1,20 @@
 package com.tbd.lab3.services;
 
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.AggregateIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import org.bson.Document;
 import com.tbd.lab3.models.Emergency;
 import com.tbd.lab3.repositories.EmergencyRepository;
 
 import java.util.List;
-
+import java.util.ArrayList;
+import java.util.Arrays;
 /**
  * Clase servicio para Emergency.
  */
@@ -69,5 +76,22 @@ public class EmergencyService {
     public String deleteAllEmergencies(){
         emergencyRepository.deleteAll();
         return "Emergencies deleted";
+    }
+        /**
+     * Método que obtiene las tareas de una emergencia usando aggregate, lookup y unwind
+     * @return String
+     */
+    @GetMapping("/emergency/tasks/{id}")
+    public ArrayList<Document> getTasksByEmergency(@PathVariable("id") int id_emergency) {
+        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017/test?readPreference=primary&serverSelectionTimeoutMS=2000&appname=MongoDB+Compass&directConnection=true&ssl=false"));
+        MongoDatabase database = mongoClient.getDatabase("tbd3");
+        MongoCollection<Document> collection = database.getCollection("tasks");
+        AggregateIterable<Document> tareas = collection.aggregate(Arrays.asList(new Document("$match", new Document("id_emergency", id_emergency)),
+        new Document("$lookup", new Document("from", "tasks").append("localField","id_task").append("foreignField","id_emergency").append("as","tasks"))));
+        ArrayList<Document> docOut = new ArrayList<>();
+        for (Document document : tareas) {
+            docOut.add(document);
+        }
+        return docOut;
     }
 }

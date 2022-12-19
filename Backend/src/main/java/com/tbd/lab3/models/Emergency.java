@@ -15,7 +15,6 @@ public class Emergency {
   private String name;
   private String description;
   private String status;
-  private Integer id_institution;
   private Double latitud;
   private Double longitud;
 
@@ -85,22 +84,6 @@ public class Emergency {
   }
 
   /**
-   * Obtiene el id de la institución (integer) de una Emergencia
-   * @return Integer
-   */
-  public Integer getId_institution() {
-    return id_institution;
-  }
-
-  /**
-   * Modifica el id de la institución (integer) de una Emergencia
-   * @param id_institution
-   */
-  public void setId_institution(Integer id_institution) {
-    this.id_institution = id_institution;
-  }
-
-  /**
    * Método que retorna un string con los atributos de la clase Emergency
    * @return String
    */
@@ -116,8 +99,6 @@ public class Emergency {
       ", status='" +
       status +
       '\'' +
-      ", id_institution=" +
-      id_institution +
       ", latitud=" +
       latitud +
       ", longitud=" +
