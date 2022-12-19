@@ -36,12 +36,12 @@ public class VoluntaryService {
         return voluntaryRepository.findAll();
     }
 
-    @GetMapping("/abilities/region/{id}")
+    @GetMapping("/skills/region/{id}")
     public List<Voluntary> getAllTasks(@PathVariable("id") int id_region) {
         Query query = new Query();
         query.addCriteria(Criteria.where("id_region").is(id_region));
         List <Region> regions = mongoTemplate.find(query, Region.class);
-        BasicQuery query2 = new BasicQuery("{ location: { $geoWithin: {$geometry:"+ regions.get(0).getGeometry() +"} } }, {name: 1, abilities: 1, _id: 0}");
+        BasicQuery query2 = new BasicQuery("{ location: { $geoWithin: {$geometry:"+ regions.get(0).getGeometry() +"} } }, {name: 1, skills: 1, _id: 0}");
         List <Voluntary> voluntaries2 = mongoTemplate.find(query2, Voluntary.class);
         return voluntaries2;
     }

@@ -5,7 +5,7 @@ db = db.getSiblingDB('tbd3'); // obtiene la base de datos tbd3
 // Query 1: Hacer una consulta  en un servicio REST para mostrar las tareas de una emergencia usando aggregate, lookup y unwind
 printjson(
 db.tasks.aggregate([
-  { $match: { id_emergency: 3 } },
+  { $match: { id_emergency: 3 } }, // Se toma de ejemplo a la emergencia con id 3
   {
     $lookup: {
       from: "tasks",

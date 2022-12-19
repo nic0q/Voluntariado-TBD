@@ -1,11 +1,9 @@
 package com.tbd.lab3.services;
 
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
 import com.mongodb.client.AggregateIterable;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import org.bson.Document;
@@ -24,6 +22,9 @@ public class EmergencyService {
     @Autowired
     EmergencyRepository emergencyRepository;
 
+    @Autowired
+    private MongoTemplate mongoTemplate;
+    
     /**
      * Método que conecta la ruta /emergencies con el método getAllEmergencies() del
      * repositorio de Emergency. Retorna una lista de todas las emergencias.
@@ -78,20 +79,18 @@ public class EmergencyService {
         return "Emergencies deleted";
     }
         /**
-     * Método que obtiene las tareas de una emergencia usando aggregate, lookup y unwind
-     * @return String
+     * Método que obtiene las tareas de una emergencia usando match, aggregate, lookup, unwind y project.
+     * @return ArrayList<Document> 
      */
-    @GetMapping("/emergency/tasks/{id}")
+    @GetMapping("/emergencies/tasks/{id}")
     public ArrayList<Document> getTasksByEmergency(@PathVariable("id") int id_emergency) {
-        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017/test?readPreference=primary&serverSelectionTimeoutMS=2000&appname=MongoDB+Compass&directConnection=true&ssl=false"));
-        MongoDatabase database = mongoClient.getDatabase("tbd3");
-        MongoCollection<Document> collection = database.getCollection("tasks");
+        ArrayList<Document> docOut = new ArrayList<>();
+        MongoCollection<Document> collection = mongoTemplate.getCollection("tasks");
         AggregateIterable<Document> tareas = collection.aggregate(Arrays.asList(
         new Document("$match", new Document("id_emergency", id_emergency)),
         new Document("$lookup", new Document("from", "tasks").append("localField","id_task").append("foreignField","id_emergency").append("as","tasks")),
         new Document("$unwind", "$tasks"),
         new Document("$project", new Document("_id", 0).append("id_emergency", 1).append("tasks", 1))));
-        ArrayList<Document> docOut = new ArrayList<>();
         for (Document document : tareas) {
             docOut.add(document);
         }

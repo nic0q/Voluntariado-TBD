@@ -133,7 +133,7 @@ export default {
     },
     async get_emergencies_by_region(){
       //se llama el servicio
-      let response = await this.$axios.get('/abilities/region/' + this.id_region);
+      let response = await this.$axios.get('/skills/region/' + this.id_region);
       console.log(response.data);
       this.voluntaries = response.data;
       this.voluntaries.length === 0 ? this.no_emergencies = true : this.no_emergencies = false;
