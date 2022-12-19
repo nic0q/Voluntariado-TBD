@@ -1,0 +1,42 @@
+[
+    {
+        "id_task": 0,
+        "name": "Limpiar",
+        "id_state_task": 1,
+        "id_emergency": 0,
+        "latitud": -73.255457,
+        "longitud": -39.835746
+    },
+    {
+        "id_task": 1,
+        "name": "Ordenar suministros",
+        "id_state_task": 1,
+        "id_emergency": 1,
+        "latitud": -70.665808,
+        "longitud": -33.418902
+    },
+    {
+        "id_task": 2,
+        "name": "Guiar refugiados",
+        "id_state_task": 1,
+        "id_emergency": 2,
+        "latitud": -71.358944,
+        "longitud": -29.987806
+    },
+    {
+        "id_task": 3,
+        "name": "Cuidar y alimentar mascotas",
+        "id_state_task": 1,
+        "id_emergency": 3,
+        "latitud": -71.942540,
+        "longitud": -39.418783
+    },
+    {
+        "id_task": 4,
+        "name": "Subir suministros a un camion",
+        "id_state_task": 4,
+        "id_emergency": 3,
+        "latitud": -72.942540,
+        "longitud": -39.418783
+    }
+]

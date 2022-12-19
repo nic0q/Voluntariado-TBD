@@ -6,10 +6,10 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <div class="home">
+    <div class="home" >
       <div>
         <div class="row">
-          <div class="col-md-5" style="margin-top: 50px; margin-left: 20px;">
+          <div class="colum" style="margin-top: 50px; margin-left: 20px;">
             <h1>Habilidades por Región</h1>
             <span>Selecciona la región para buscar habilidades</span>
             <div>
@@ -24,7 +24,7 @@
                 <div v-if="this.no_emergencies" class="alert alert-info" role="alert">No hay emergencias para esta region</div>
               </p>
             </div>
-            <table class="table" style="width: 800px">
+            <table class="table">
               <thead class="thead-dark">
                 <tr>
                   <th scope="col"></th>
@@ -44,7 +44,7 @@
               </tbody>
             </table>
           </div>
-          <div class="col-md-6" style="margin-top: 50px">
+          <div class="colum" style="margin-top: 50px">
             <div>
               <h3>{{ this.region_name }}</h3>
               <div id="mapita"></div>
@@ -174,7 +174,7 @@ export default {
     },
     goToPoint(lat, long) {
       console.log(this.id_region)
-      this.mymap.flyTo([long, lat], 12);
+      this.mymap.flyTo([long, lat], 16);
     }
   },
 
@@ -213,12 +213,15 @@ export default {
 
 .table {
   background-color: white;
+  width:650px;
+
 }
 
 /* Estilos necesarios para definir el objeto de mapa */
 #mapita {
-  height: 781px;
-  width: 1070px;
+  height: 754px;
+  width:650px;
+  margin-left: 10px;
 }
 
 .text_centrado {

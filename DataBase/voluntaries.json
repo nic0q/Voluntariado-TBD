@@ -149,13 +149,13 @@
       "Atletico",
       "Flexibilidad"
     ],
-    "latitud": -70.900168,
-    "longitud": -53.162391,
+    "latitud": -70.344922,
+    "longitud": -27.359315,
     "location": {
       "type": "Point",
       "coordinates": [
-        -70.900168,
-        -53.162391
+        -70.344922,
+        -27.359315
       ]
     }
   },
@@ -169,13 +169,13 @@
       "Adiestrador de Animales",
       "Experto en sismos"
     ],
-    "latitud": -70.880803,
-    "longitud": -53.124725,
+    "latitud": -70.348446,
+    "longitud": -27.388605,
     "location": {
       "type": "Point",
       "coordinates": [
-        -70.880803,
-        -53.124725
+        -70.348446,
+        -27.388605
       ]
     }
   },
@@ -189,13 +189,13 @@
       "Manejo de embarcaciones",
       "Empatico"
     ],
-    "latitud":  -70.942751,
-    "longitud": -53.171141,
+    "latitud":  -70.305960,
+    "longitud": -27.370771,
     "location": {
       "type": "Point",
       "coordinates": [
-        -70.942751,
-        -53.171141
+        -70.305960,
+        -27.370771 
       ]
     }
   }
