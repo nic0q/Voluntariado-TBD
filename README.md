@@ -43,7 +43,7 @@ También, para el desarrollo del proyecto se utilizó:
 ## Instrucciones de instalación
 1. Clonar el repositorio: Esto proporcionará las tres carpetas principales para el proyecto de Laboratorio. Para clonarlo, se debe usar el siguiente comando en el directorio deseado:
 ```sh
-git clone https://github.com/nic0q/TBD-MongoDB.git
+git clone https://github.com/nic0q/TBD-Lab3-Grupo5.git
 ```
 2. Ir al siguiente [link](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/) e instalar MongoDB Community Edition y seguir las instrucciones del instalador.
 3. Ir al siguiente [link](https://www.mongodb.com/try/download/compass) e instalar MongoDB Compass y seguir las instrucciones del instalador.
