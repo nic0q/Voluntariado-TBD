@@ -1,0 +1,202 @@
+[
+  {
+    "rut": 273915784,
+    "name": "Juan",
+    "age": 31,
+    "avalaible": false,
+    "skills": [
+      "Nadar",
+      "Correr",
+      "Primeros Auxilios"
+    ],
+    "latitud":  -70.701496,
+    "longitud": -33.463788,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -70.701496,
+        -33.463788
+      ]
+    }
+  },
+  {
+    "rut": 283915784,
+    "name": "Tomas",
+    "age": 39,
+    "avalaible": true,
+    "skills": [
+      "Fuerza",
+      "Liderazgo",
+      "Experiencia"
+    ],
+    "latitud": -70.630791,
+    "longitud": -33.432582,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -70.630791,
+        -33.432582
+      ]
+    }
+  },
+  {
+    "rut": 193915384,
+    "name": "Luis",
+    "age": 24,
+    "avalaible": true,
+    "skills": [
+      "Psicologia",
+      "Buena vista",
+      "Bilingue"
+    ],
+    "latitud": -70.611546,
+    "longitud": -33.487256,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -70.611546,
+        -33.487256
+      ]
+    }
+  },
+  {
+    "rut": 213215684,
+    "name": "Martin",
+    "age": 27,
+    "avalaible": false,
+    "skills": [
+      "Velocidad",
+      "Agilidad",
+      "Seguridad"
+    ],
+    "latitud": -70.755138,
+    "longitud": -33.436172,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -70.755138,
+        -33.436172
+      ]
+    }
+  },
+  {
+    "rut": 213215682,
+    "name": "Nico",
+    "age": 21,
+    "avalaible": true,
+    "skills": [
+      "Nadar",
+      "Habilida de conduccion",
+      "Conocedor de la marea"
+    ],
+    "latitud": -71.556963,
+    "longitud": -33.014848,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -71.556963,
+        -33.014848
+      ]
+    }
+  },
+  {
+    "rut": 213215683,
+    "name": "Lionel",
+    "age": 35,
+    "avalaible": true,
+    "skills": [
+      "Astuto",
+      "Experiencia",
+      "Buen olfato"
+    ],
+    "latitud":  -71.544477,
+    "longitud": -33.002630,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -71.544477,
+        -33.002630
+      ]
+    }
+  },
+  {
+    "rut": 213215684,
+    "name": "Vicente",
+    "age": 20,
+    "avalaible": true,
+    "skills": [
+      "RCP",
+      "Calculadora humana",
+      "Programacion"
+    ],
+    "latitud": -71.580097,
+    "longitud": -33.042235,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -71.580097,
+        -33.042235
+      ]
+    }
+  },
+  {
+    "rut": 213215685,
+    "name": "Lautaro",
+    "age": 25,
+    "avalaible": true,
+    "skills": [
+      "Fuerza",
+      "Atletico",
+      "Flexibilidad"
+    ],
+    "latitud": -70.900168,
+    "longitud": -53.162391,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -70.900168,
+        -53.162391
+      ]
+    }
+  },
+  {
+    "rut": 213215686,
+    "name": "Mario",
+    "age": 19,
+    "avalaible": true,
+    "skills": [
+      "Veterinario",
+      "Adiestrador de Animales",
+      "Experto en sismos"
+    ],
+    "latitud": -70.880803,
+    "longitud": -53.124725,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -70.880803,
+        -53.124725
+      ]
+    }
+  },
+  {
+    "rut": 213215687,
+    "name": "Arturo",
+    "age": 40,
+    "avalaible": true,
+    "skills": [
+      "Buceador",
+      "Manejo de embarcaciones",
+      "Empatico"
+    ],
+    "latitud":  -70.942751,
+    "longitud": -53.171141,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -70.942751,
+        -53.171141
+      ]
+    }
+  }
+]
