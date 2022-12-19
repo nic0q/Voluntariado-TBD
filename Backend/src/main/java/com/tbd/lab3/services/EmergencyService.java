@@ -86,8 +86,11 @@ public class EmergencyService {
         MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017/test?readPreference=primary&serverSelectionTimeoutMS=2000&appname=MongoDB+Compass&directConnection=true&ssl=false"));
         MongoDatabase database = mongoClient.getDatabase("tbd3");
         MongoCollection<Document> collection = database.getCollection("tasks");
-        AggregateIterable<Document> tareas = collection.aggregate(Arrays.asList(new Document("$match", new Document("id_emergency", id_emergency)),
-        new Document("$lookup", new Document("from", "tasks").append("localField","id_task").append("foreignField","id_emergency").append("as","tasks"))));
+        AggregateIterable<Document> tareas = collection.aggregate(Arrays.asList(
+        new Document("$match", new Document("id_emergency", id_emergency)),
+        new Document("$lookup", new Document("from", "tasks").append("localField","id_task").append("foreignField","id_emergency").append("as","tasks")),
+        new Document("$unwind", "$tasks"),
+        new Document("$project", new Document("_id", 0).append("id_emergency", 1).append("tasks", 1))));
         ArrayList<Document> docOut = new ArrayList<>();
         for (Document document : tareas) {
             docOut.add(document);
