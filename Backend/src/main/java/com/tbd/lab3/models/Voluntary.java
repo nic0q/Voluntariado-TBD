@@ -36,15 +36,35 @@ public class Voluntary {
       this.longitud = longitud;
       this.location = new GeoJsonPoint(latitud, longitud);
   }
+    
+    /** 
+     * Método que modifica el atributo location (GeoJsonPoint)
+     * @param location
+     */
     public void setLocation(GeoJsonPoint location) {
       this.location = location;
     }
+    
+    /** 
+     * Método que retorna el atributo location (GeoJsonPoint)
+     * @return GeoJsonPoint
+     */
     public GeoJsonPoint getLocation() {
       return location;
     }
+    
+    /** 
+     * Método que retorna el atributo id (ObjectId)
+     * @return ObjectId
+     */
     public ObjectId get_id() {
         return _id;
     }
+    
+    /** 
+     * Método que modifica el atributo id (ObjectId)
+     * @param _id
+     */
     public void set_id(ObjectId _id) {
         this._id = _id;
     }
@@ -52,6 +72,7 @@ public class Voluntary {
      * Método que modifica el atributo rut (String).
      * @param rut
      */
+
     public void setRut(String rut) {
       this.rut = rut;
     }
@@ -111,6 +132,7 @@ public class Voluntary {
     public Boolean getAvalaible() {
         return avalaible;
     }
+
     /**
    * Obtiene la latitud (double) de una Emergencia
    * @return Double
@@ -142,9 +164,19 @@ public class Voluntary {
   public void setLongitud(Double longitud) {
     this.longitud = longitud;
   }
+
+  /** 
+   * Método que retorna el atributo skills (List<String>)
+   * @return List<String>
+   */
   public List<String> getSkills() {
     return skills;
   }
+  
+  /** 
+   * Método que modifica el atributo skills (List<String>)
+   * @param skills
+   */
   public void setSkills(List<String> skills) {
     this.skills = skills;
   }

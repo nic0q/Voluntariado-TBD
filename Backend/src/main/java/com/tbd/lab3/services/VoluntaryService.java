@@ -24,18 +24,29 @@ public class VoluntaryService {
 
     @Autowired
     VoluntaryRepository voluntaryRepository;
+
     @Autowired
     private MongoTemplate mongoTemplate;
+
     /**
-     * Método que conecta la ruta /emergencies con el método getAllEmergencies() del
-     * repositorio de Emergency. Retorna una lista de todas las emergencias.
-     * @return List<Emergency>
+     * Método que conecta la ruta /voluntaries con el método getAllVoluntaries() del
+     * repositorio de Voluntary. Retorna una lista de todos los voluntarios
+     * @return List<Voluntary>
      */
     @GetMapping("/voluntaries")
     public List<Voluntary> getAllVoluntaries() {
         return voluntaryRepository.findAll();
     }
 
+
+    
+    /** 
+     * Método que conecta la ruta /skills/region/{id} para obtener una lista de voluntarios 
+     * que tengan habilidades en una región específica. Retorna una lista de voluntarios.
+     * Recibe un parámetro id_region.
+     * @param id_region
+     * @return List<Voluntary>
+     */
     @GetMapping("/skills/region/{id}")
     public List<Voluntary> getAllTasks(@PathVariable("id") int id_region) {
         Query query = new Query();

@@ -19,6 +19,7 @@ import java.util.Arrays;
 @CrossOrigin
 @RestController
 public class EmergencyService {
+    
     @Autowired
     EmergencyRepository emergencyRepository;
 
@@ -78,7 +79,8 @@ public class EmergencyService {
         emergencyRepository.deleteAll();
         return "Emergencies deleted";
     }
-        /**
+
+    /**
      * Método que obtiene las tareas de una emergencia usando match, aggregate, lookup, unwind y project.
      * @return ArrayList<Document> 
      */

@@ -16,10 +16,13 @@ import java.util.List;
 @CrossOrigin
 @RestController
 public class RegionService {
+
     @Autowired
     private RegionRepository regionRepository;
+
     @Autowired
     private MongoTemplate mongoTemplate;
+    
     /**
      * Método que conecta la ruta /regions con el método getAllRegions() del
      * repositorio de Region. Retorna una lista de todas las regiones.
@@ -30,6 +33,13 @@ public class RegionService {
     public List<Region> getAllRegions() {
         return regionRepository.findAll();
     }
+
+    /** 
+     * Método que conecta la ruta /regions/{id} para obtener una región específica.
+     * Retorna una región específica. Recibe un parámetro id_region.
+     * @param id_region
+     * @return Region
+     */
     @GetMapping("/regions/{id}")
     public Region getRegion(@PathVariable("id") int id_region) {
         Query query = new Query();
