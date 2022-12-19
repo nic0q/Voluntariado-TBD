@@ -102,13 +102,17 @@ public class TaskService {
         return "Tasks deleted";
     }
 
+    /**
+     * Método que obtiene las tareas de una emergencia usando aggregate, lookup y unwind
+     * @return String
+     */
     @GetMapping("/emergency/tasks/{id}")
     public ArrayList<Document> getTasksByEmergency(@PathVariable("id") int id_emergency) {
         MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017/test?readPreference=primary&serverSelectionTimeoutMS=2000&appname=MongoDB+Compass&directConnection=true&ssl=false"));
         MongoDatabase database = mongoClient.getDatabase("tbd3");
         MongoCollection<Document> collection = database.getCollection("tasks");
-        AggregateIterable<Document> tareas = collection.aggregate(Arrays.asList(new Document("$match", new Document("id_task", id_emergency)),
-                new Document("$lookup", new Document("from", "tasks").append("localField","id_task").append("foreignField","id_emergency").append("as","tasks"))));
+        AggregateIterable<Document> tareas = collection.aggregate(Arrays.asList(new Document("$match", new Document("id_emergency", id_emergency)),
+        new Document("$lookup", new Document("from", "tasks").append("localField","id_task").append("foreignField","id_emergency").append("as","tasks"))));
         ArrayList<Document> docOut = new ArrayList<>();
         for (Document document : tareas) {
             docOut.add(document);
